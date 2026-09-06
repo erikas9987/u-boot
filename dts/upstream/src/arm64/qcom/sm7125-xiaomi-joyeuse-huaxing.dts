@@ -1,0 +1,20 @@
+// SPDX-License-Identifier: GPL-2.0
+/*
+ * Copyright (c) 2021, The Linux Foundation. All rights reserved.
+ * Copyright (C) 2025 Vitalii Skorkin <nikroksm@mail.ru>
+ */
+
+/dts-v1/;
+
+#include "sm7125-xiaomi-joyeuse.dtsi"
+
+/ {
+	model = "Xiaomi Redmi Note 9 Pro (Global, Huaxing)";
+	compatible = "xiaomi,joyeuse-huaxing", "xiaomi,joyeuse", "qcom,sm7125";
+};
+
+&panel { compatible = "huaxing,ft8756"; };
+&touchscreen {
+	compatible = "focaltech,ft8756-spi";
+	firmware-name = "focaltech_ts_fw_huaxing.bin";
+};
